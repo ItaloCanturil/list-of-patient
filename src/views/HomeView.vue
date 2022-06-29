@@ -1,18 +1,20 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Home</h1>
+  <button @click="getUsers()">teste</button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld,
+  methods: {
+    async getUsers() {
+      const UserRepository = this.$repository('users');
+      const { data } = await UserRepository.get();
+      console.log(data);
+    },
   },
 };
 </script>

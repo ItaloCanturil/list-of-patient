@@ -1,20 +1,25 @@
 <template>
   <div class="home">
   <h1>Home</h1>
-  <button @click="getUsers()">teste</button>
   </div>
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex';
 
 export default {
   name: 'HomeView',
+
+  computed: {
+    ...mapState([
+      'users',
+    ]),
+  },
+  created() {
+    this.getUsers();
+  },
   methods: {
-    async getUsers() {
-      const UserRepository = this.$repository('users');
-      const { data } = await UserRepository.get();
-      console.log(data);
-    },
+    ...mapActions(['getUsers']),
   },
 };
 </script>

@@ -35,13 +35,15 @@
       />
     </figure>
 
-    <p>{{ data.name.first }} {{ data.name.last }}</p>
-    <p>{{ data.gender }}</p>
-    <p>{{ data.email }}</p>
-    <p>{{ formatDate(data.dob.date) }}</p>
-    <p>{{ data.phone }}</p>
-    <p>{{ data.location.postcode }} {{ data.location.city }} {{ data.nat }}</p>
-    <p>{{ data.id.value }}</p>
+    <div class="text-left">
+      <p>Nome completo: {{ data.name.first }} {{ data.name.last }}</p>
+      <p>Genêro: {{ data.gender }}</p>
+      <p>Email: {{ data.email }}</p>
+      <p>Data de Nascimento: {{ formatDate(data.dob.date) }}</p>
+      <p>Telefone: {{ data.phone }}</p>
+      <p>Endereço: {{ data.location.postcode }} {{ data.location.city }} {{ data.nat }}</p>
+      <p>ID: {{ data.id.value }}</p>
+    </div>
     <label for="copy">
       <input
         v-on:focus="$event.target.select()"

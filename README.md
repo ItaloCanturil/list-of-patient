@@ -21,7 +21,7 @@ Gerenciador de participante onde se lista pacientes contendo informações, tend
 ### Usando docker
 
 - Construir imagem: docker build -t nome .
-- Testando imagem: docker run -p 80:80 noma_imagem
+- Testando imagem: docker run -p 80:80 nome_imagem
 - Abra o navegador e digite http://localhost
 ----
 ### Usando Gerenciador de pacote

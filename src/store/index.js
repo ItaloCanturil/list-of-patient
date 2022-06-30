@@ -12,22 +12,22 @@ export default new Vuex.Store({
     pages: null,
   },
   actions: {
-    async getUsers({ commit }) {
+    async getUsers({ commit }, start) {
       commit('SET_LOADING', true);
       const repository = RepositoryFactory.get('users');
       try {
-        const data = await repository.get();
+        const data = await repository.get(start);
 
         commit('SET_DATA', data.data);
       } finally {
         commit('SET_LOADING', false);
       }
     },
-    async getMore({ commit }, qtd) {
+    async getMore({ commit }, payload) {
       commit('SET_LOADING', true);
       const repository = RepositoryFactory.get('users');
       try {
-        const data = await repository.getMore(qtd);
+        const data = await repository.getMore(payload);
 
         commit('SET_DATA', data.data);
       } finally {

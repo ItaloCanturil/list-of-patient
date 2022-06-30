@@ -3,13 +3,10 @@ import client from './clients/AxiosClient';
 const resource = '/';
 
 export default {
-  get() {
-    return client.get(`${resource}?results=20`);
+  get(start) {
+    return client.get(`${resource}?results=${start}&seed=italo`);
   },
-  getMore(qtd) {
-    return client.get(`${resource}?results=${qtd}`);
-  },
-  getWithFilters(params = {}) {
-    return client.get(`${resource}/${params}`);
+  getMore(info) {
+    return client.get(`${resource}?results=${info.results + 10}&seed=italo`);
   },
 };

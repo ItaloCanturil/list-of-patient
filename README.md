@@ -1,29 +1,30 @@
-# list-patient
+# Pharma Inc
 
-## Project setup
-```
-npm install
-```
+## Bem Vindo ao Desafio Frontend <a href="https://coodesh.com/">Coodesh</a>
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Gerenciador de participante onde se lista pacientes contendo informações, tendo a possibilidade de compartilhar a URL do participante.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 🧠 Tecnologias utilizadas
 
-### Run your unit tests
-```
-npm run test:unit
-```
+- Vue
+- Vuex
+- Vue router
+- Options API
+- TailwindCSS
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 🛠 Instruções de Instalação
+
+1. Clone o repositorio
+
+----
+### Usando docker
+
+- Construir imagem: docker build -t nome .
+- Testando imagem: docker run -p 80:80 noma_imagem
+- Abra o navegador e digite http://localhost
+----
+### Usando Gerenciador de pacote
+
+- Instalar dependências: `npm install`
+- Iniciar o projeto: `npm run serve`

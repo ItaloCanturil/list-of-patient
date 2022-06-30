@@ -2,7 +2,7 @@
   <div class="home flex flex-col items-center min-h-screen bg-slate-900 py-5 ">
     <router-view></router-view>
     <top-bar/>
-    <p class="text-white w-auto sm:w-[30rem] my-3">
+    <p class="text-white w-auto sm:w-[30rem] my-3 sm:p-0 px-3">
       Bem vindo ao nosso sistema de gerenciamento! Ficamos felizes em você está conosco.
       Você pode analisar mais informações do paciente clicando no botão com "+" e compartilhar esse
       paciente, quando entrar nesse link, você sempre vai observar as informações desse paciente em

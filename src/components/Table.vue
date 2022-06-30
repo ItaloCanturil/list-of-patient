@@ -23,7 +23,7 @@
     </thead>
     <tbody>
       <tr v-for="(user, index) in data" :key="index">
-        <td>
+        <td class="p-1">
           <p>{{ user.name.first }}</p>
         </td>
         <td>

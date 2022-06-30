@@ -34,6 +34,17 @@ export default new Vuex.Store({
         commit('SET_LOADING', false);
       }
     },
+    async getWithFilters({ commit }, params) {
+      commit('SET_LOADING', true);
+      const repository = RepositoryFactory.get('users');
+      try {
+        const data = await repository.getWithFilters(params);
+
+        commit('SET_DATA', data.data);
+      } finally {
+        commit('SET_LOADING', false);
+      }
+    },
   },
   mutations: {
     SET_DATA(state, data) {

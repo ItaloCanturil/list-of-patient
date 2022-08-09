@@ -35,7 +35,7 @@
         <td class="flex justify-center">
           <router-link
             class="bg-[#f25f4c] p-1 rounded-full text-white"
-            :to="'/view/' + index"
+            :to="'/view/' + user.index_id"
           >
             <button class="flex items-center">
               <svg

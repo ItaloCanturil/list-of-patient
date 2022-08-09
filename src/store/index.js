@@ -48,14 +48,9 @@ export default new Vuex.Store({
   },
   mutations: {
     SET_DATA(state, data) {
-      state.users = data.results;
+      state.users = data.results.map((item, index) => ({ ...item, index_id: index }));
       state.pages = data.info;
     },
-    // SET_MORE(state, data) {
-    //   console.log(data.results);
-    //   state.users += data.results;
-    //   // state.pages += data.info.results;
-    // },
     SET_LOADING(state, boolean) {
       state.loading = boolean;
     },

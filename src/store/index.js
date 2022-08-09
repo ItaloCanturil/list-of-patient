@@ -11,6 +11,9 @@ export default new Vuex.Store({
     users: [],
     pages: null,
   },
+  getters: {
+    byGender: (state) => (gender) => state.user.filter((item) => item.gender === gender),
+  },
   actions: {
     async getUsers({ commit }, start) {
       commit('SET_LOADING', true);
